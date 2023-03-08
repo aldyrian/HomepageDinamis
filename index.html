@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aldy Rian</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo" id="logo">Aldy Rian</a>
+            <ul>
+                <li><a href="#" class="list active">Home</a></li>
+                <li><a href="#" class="list">About</a></li>
+                <li><a href="#" class="list">Work</a></li>
+                <li><a href="#" class="list">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="pic/stars.png" id="stars">
+            <img src="pic/moon.png" id="moon">
+            <img src="pic/mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Moon Light</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="pic/mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Efek Scroll Paralax</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et aliquid impedit eaque porro quas eos temporibus asperiores hic 
+                dolores dolorem nostrum nisi nemo officia quisquam ipsum, at ducimus reprehenderit nam id incidunt, maiores tempora facilis? 
+                Consectetur alias reprehenderit quisquam porro saepe, quaerat, dignissimos obcaecati veritatis maiores necessitatibus quos unde 
+                at. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et aliquid impedit eaque porro quas eos temporibus asperiores hic 
+                dolores dolorem nostrum nisi nemo officia quisquam ipsum, at ducimus reprehenderit nam id incidunt, maiores tempora facilis? 
+                Consectetur alias reprehenderit quisquam porro saepe, quaerat, dignissimos obcaecati veritatis maiores necessitatibus quos unde at. 
+                <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et aliquid impedit eaque porro quas eos temporibus asperiores hic 
+                dolores dolorem nostrum nisi nemo officia quisquam ipsum, at ducimus reprehenderit nam id incidunt, maiores tempora facilis? 
+                Consectetur alias reprehenderit quisquam porro saepe, quaerat, dignissimos obcaecati veritatis maiores necessitatibus quos unde at.
+                <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et aliquid impedit eaque porro quas eos temporibus asperiores hic 
+                dolores dolorem nostrum nisi nemo officia quisquam ipsum, at ducimus reprehenderit nam id incidunt, maiores tempora facilis? 
+                Consectetur alias reprehenderit quisquam porro saepe, quaerat, dignissimos obcaecati veritatis maiores necessitatibus quos unde 
+                at. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et aliquid impedit eaque porro quas eos temporibus asperiores hic 
+                dolores dolorem nostrum nisi nemo officia quisquam ipsum, at ducimus reprehenderit nam id incidunt, maiores tempora facilis?
+                <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et aliquid impedit eaque porro quas eos temporibus asperiores hic 
+                dolores dolorem nostrum nisi nemo officia quisquam ipsum, at ducimus reprehenderit nam id incidunt, maiores tempora facilis? 
+                Consectetur alias reprehenderit quisquam porro saepe, quaerat, dignissimos obcaecati veritatis maiores necessitatibus quos unde 
+                at. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et aliquid impedit eaque porro quas eos temporibus asperiores hic 
+                dolores dolorem nostrum nisi nemo officia quisquam ipsum, at ducimus reprehenderit nam id incidunt, maiores tempora facilis? 
+                Consectetur alias reprehenderit quisquam porro saepe, quaerat, dignissimos obcaecati veritatis maiores necessitatibus quos unde at. 
+                <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et aliquid impedit eaque porro quas eos temporibus asperiores hic 
+                dolores dolorem nostrum nisi nemo officia quisquam ipsum, at ducimus reprehenderit nam id incidunt, maiores tempora facilis? 
+                Consectetur alias reprehenderit quisquam porro saepe, quaerat, dignissimos obcaecati veritatis maiores necessitatibus quos unde at.
+                <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et aliquid impedit eaque porro quas eos temporibus asperiores hic 
+                dolores dolorem nostrum nisi nemo officia quisquam ipsum, at ducimus reprehenderit nam id incidunt, maiores tempora facilis? 
+                Consectetur alias reprehenderit quisquam porro saepe, quaerat, dignissimos obcaecati veritatis maiores necessitatibus quos unde 
+                at. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et aliquid impedit eaque porro quas eos temporibus asperiores hic 
+                dolores dolorem nostrum nisi nemo officia quisquam ipsum, at ducimus reprehenderit nam id incidunt, maiores tempora facilis?
+            </p>
+        </div>
+        <a href="#logo" class="scroll-to-top"><ion-icon name="caret-up-circle-outline"></ion-icon></a>
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+
+            window.addEventListener('scroll', function() {
+                var scrollPosition = window.pageYOffset;
+                if (scrollPosition > 200) {
+                        document.querySelector('.scroll-to-top').classList.add('show-scroll');
+                } 
+                else {
+                    document.querySelector('.scroll-to-top').classList.remove('show-scroll');
+                }
+            });
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
